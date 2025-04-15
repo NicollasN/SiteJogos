@@ -1,0 +1,166 @@
+:root {
+    --cor-primaria: #222;
+    --cor-secundaria: #fff;
+    --cor-claro: #eee;
+    --cor-claro-hover: #bbb;
+    --cor-escuro-hover: #777;
+    --fonte-principal: 'Montserrat', sans-serif;
+    --espacamento-medio: 30px;
+    --borda-arredondada: 8px;
+    --transicao-padrao: color 0.2s linear, background-color 0.2s linear;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    margin-left: 50px;
+}
+
+img{
+    max-width: 100%;
+}
+
+body{
+    background-color: var(--cor-primaria); 
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-principal);
+    line-height: 120%;
+}
+
+.light{
+    background-color: var(--cor-claro);
+    color: var(--cor-primaria);
+    font-family: 'Montserrat';
+    line-height: 120%;
+}
+
+header{
+    background-color: #111;
+    padding: var(--espacamento-medio) calc(var(--espacamento-medio) + 10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}   
+
+.light header {
+    background-color: #ddd;
+}
+
+section, footer{
+    padding: var(--espacamento-medio);
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacamento-medio);
+}
+
+footer{
+    align-items: center;
+    text-align: center;
+}
+
+a {
+    color: inherit;
+    transition: color 0.2s linear;
+}
+
+a:hover {
+    color: lightblue;
+}
+
+.light a:hover {
+    color: #555;
+}
+
+button{
+    padding: 5px 15px;
+    border-radius: 8px;
+    border: none;
+    background-color: #eee;
+    transition: background-color 0.2s linear;
+    cursor: pointer;
+}
+
+/* .light button {
+    background-color: #aaa;
+    color: #fff;
+} */
+
+
+button:hover {
+    background-color: #bbb;
+}
+
+/* .light button:hover {
+    background-color: #777;
+} */
+.botaoJogo{
+    width: 100px;
+    padding: 10px 20px;
+    border-radius: var(--borda-arredondada);
+    border: none;
+    background-color: rgb(78, 0, 202); /* Cor de destaque para download */
+    color: var(--cor-secundaria);
+    transition: background-color 0.2s linear;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none; /* Para o caso de ser um link */
+}
+
+.botaoJogo:hover{
+    background-color: #8fbc8f;
+    color: var(--cor-primaria);
+}
+
+.emuladores{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.emulador{
+    background-color: #333;
+    border-radius: var(--borda-arredondada);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.capa-emulador{
+    max-width: 100%;
+    border-radius: var(--borda-arredondada);
+}
+
+
+.jogos{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.jogo{
+    background-color: #333;
+    border-radius: var(--borda-arredondada);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.capa-jogo{
+    max-width: 100%;
+    border-radius: var(--borda-arredondada);
+}
+
+.informaçoes{
+    display: none;
+}
+
+.informaçoes.visivel{
+    display: block;
+}
+
